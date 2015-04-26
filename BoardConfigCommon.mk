@@ -23,7 +23,7 @@ BOARD_VENDOR_PLATFORM := rhine
 # Kernel information
 BOARD_KERNEL_BASE     := 0x00000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_CMDLINE  := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 msm_rtb.enable=0 lpj=192598 dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y
+BOARD_KERNEL_CMDLINE  := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3b7 ehci-hcd.park=3 androidboot.bootdevice=msm_sdcc.1 vmalloc=300M dwc3.maximum_speed=high dwc3_msm.prop_chg_detect=Y
 BOARD_MKBOOTIMG_ARGS  := --ramdisk_offset 0x02000000 --tags_offset 0x01E00000
 BOARD_KERNEL_SEPARATED_DT := true
 
@@ -82,15 +82,6 @@ TARGET_RECOVERY_FSTAB := device/sony/rhine-common/rootdir/fstab.qcom
 TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
-
-# TWRP
-TARGET_RECOVERY_DEVICE_DIRS := device/sony/honami
-DEVICE_RESOLUTION := 1080x1920
-TW_THEME := portrait_hdpi
-TW_INCLUDE_CRYPTO := true
-TW_INCLUDE_L_CRYPTO := true
-RECOVERY_GRAPHICS_USE_LINELENGTH := true
-TW_SCREEN_BLANK_ON_BOOT := true
 
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/sony/rhine-common
