@@ -87,5 +87,9 @@ TARGET_RECOVERY_PIXEL_FORMAT := "RGB_565"
 BOARD_HAS_NO_SELECT_BUTTON := true
 BOARD_USE_CUSTOM_RECOVERY_FONT := \"roboto_23x41.h\"
 
+# TWRP flags
+TW_BRIGHTNESS_PATH := /sys/class/leds/wled:backlight/brightness
+TW_MAX_BRIGHTNESS := 255
+
 # Releasetools
 TARGET_RELEASETOOLS_EXTENSIONS := device/sony/rhine-common
